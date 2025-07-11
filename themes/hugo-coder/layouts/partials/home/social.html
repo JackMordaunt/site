@@ -4,7 +4,13 @@
     {{ if .icon }}
       <li>
         <a href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }} {{ if .type }}type="{{ .type }}"{{ end }}>
-          <i class="{{ .icon }}" aria-hidden="true"></i>
+          {{ if and .srclight .srcdark -}}
+          <img src="{{ .srclight }}" class="custom-icon custom-icon-light"/>
+          <img src="{{ .srcdark }}" class="custom-icon custom-icon-dark"/>
+          {{- else -}}
+          <i class="{{ .icon }}" aria-hidden="true">
+          {{- end }}
+          </i>
         </a>
       </li>
     {{ else }}
