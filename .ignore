@@ -1,0 +1,7 @@
+public
+resources
+exampleSite
+i18n
+images
+*.scss
+*.min*
