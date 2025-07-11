@@ -3,12 +3,11 @@ oauth: pages.sr.ht/PAGES:RW
 packages:
 - hut
 - hugo
-environment:
-  site: jackmordaunt.srht.site
 tasks:
 - package: |
     cd site
     hugo
     tar -C public -cvz . > ../site.tar.gz
 - upload: |
-    hut pages publish -d $site site.tar.gz
+    hut pages publish -d jackmordaunt.srht.site site.tar.gz
+    hut pages publish -d jackmordaunt.com site.tar.gz
