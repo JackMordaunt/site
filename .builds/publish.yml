@@ -4,10 +4,10 @@ packages:
 - hut
 - hugo
 environment:
-  site: site
+  site: jackmordaunt.srht.site
 tasks:
 - package: |
-    cd $site
+    cd site
     hugo
     tar -C public -cvz . > ../site.tar.gz
 - upload: |
