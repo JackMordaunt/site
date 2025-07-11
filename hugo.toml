@@ -14,24 +14,6 @@ pagerSize = 20
 [markup.highlight]
 style = "github-dark"
 
-
-
-
-
-
-
-
-
-# TODO: replace the theme submodule with a subtree instead to support local modifications
-# TODO: add a ci build that publishes on pushes to main
-
-
-
-
-
-
-
-
 [params]
   author = "Jack Mordaunt"
   info = "Coffee developer, software brewer."
