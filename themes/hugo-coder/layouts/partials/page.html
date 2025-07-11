@@ -1,11 +1,13 @@
 <section class="container page">
   <article>
     <header>
+    {{ if .Title }}
       <h1 class="title">
         <a class="title-link" href="{{ .Permalink | safeURL }}">
           {{ .Title }}
         </a>
       </h1>
+    {{ end }}
     </header>
 
     {{ .Content }}
