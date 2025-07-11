@@ -1,0 +1,105 @@
+baseurl = "http://jackmordaunt.com/"
+title = "Jack Mordaunt"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+[pagination]
+pagerSize = 20
+
+[services]
+# [services.disqus]
+# shortname = "yourdiscussshortname"
+
+[markup.highlight]
+style = "github-dark"
+
+
+
+
+
+
+
+
+
+# TODO: replace the theme submodule with a subtree instead to support local modifications
+# TODO: add a ci build that publishes on pushes to main
+
+
+
+
+
+
+
+
+[params]
+  author = "Jack Mordaunt"
+  info = "Coffee developer, software brewer."
+  description = "Coffee developer, software brewer."
+  keywords = "blog,developer,personal,software,robust,performance,sovereign"
+  avatarurl = "images/self.jpg"
+  gravatar = "gravatar@sovereignlife.anonaddy.com"
+
+  faviconSVG = "/img/favicon.svg"
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
+
+  since = 2025
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/jackmordaunt"
+[[params.social]]
+  name = "Sourcehut"
+  icon = "fa-1x"
+  # Hack because sourcehut icon not in fa. Light & Dark are swapped based on theme.
+  srclight = "https://sourcehut.org/sourcehut.svg" 
+  srcdark = "https://sourcehut.org/sourcehut-white.svg"
+  weight = 2
+  url = "https://git.sr.ht/~jackmordaunt"
+[[params.social]]
+  name = "Public Keys"
+  icon = "fa-solid fa-key fa-2x"
+  weight = 3
+  url = "https://meta.sr.ht/~jackmordaunt.pgp"
+[[params.social]]
+  name = "Bitcoin"
+  icon = "fa-brands fa-bitcoin fa-2x"
+  weight = 4
+  url = "pay-with-bitcoin/"
+
+# Menu links
+# [[menu.main]]
+#   name = "Blog"
+#   weight = 1
+#   url  = "posts/"
+[[menu.main]]
+  name = "About"
+  weight = 2
+  url = "about/"
+[[menu.main]]
+  name = "Contact"
+  weight = 3
+  url = "contact/"
+[[menu.main]]
+  name = "Pay"
+  weight = 4
+  url = "pay-with-bitcoin/"

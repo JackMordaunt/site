@@ -1,0 +1,37 @@
+---
+---
+
+<script>
+  function copyAddress() {
+    const text = document.getElementById("btc-address").textContent;
+
+    navigator.clipboard.writeText(text).then(() => {
+      console.log("Address copied!");
+    }).catch(err => {
+      console.error("Copy failed:", err);
+    });
+  }
+</script>
+
+
+<iframe src="https://github.com/sponsors/JackMordaunt/card" title="Sponsor JackMordaunt" height="225" width="600" style="border: 0;"></iframe>
+<div class="btc-card">
+  <div class="btc-header">
+    <i class="btc-icon fa-brands fa-bitcoin fa-3x"></i>
+  </div>
+
+  <img
+    src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=bitcoin:bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+    alt="Bitcoin Address QR Code"
+    class="btc-qr"
+  >
+
+  <div class="btc-address-row">
+    <p class="btc-address" id="btc-address">bc1q6px9f0tl3r8qf5l304g2plyae5fgvw6yetzvcu</p>
+    <button class="btc-copy-icon" onclick="copyAddress()">
+      <i class="fa-solid fa-copy"></i>
+    </button>
+ </div>
+  <p class="btc-note">Scan or copy the address to send Bitcoin</p>
+</div>
+
