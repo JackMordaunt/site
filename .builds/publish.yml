@@ -3,7 +3,7 @@ oauth: pages.sr.ht/PAGES:RW
 packages:
 - hut
 environment:
-  site: jackmordaunt.srht.site
+  site: site
 tasks:
 - package: |
     cd $site
