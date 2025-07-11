@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jack Mordaunt</title>
+    <link>http://jackmordaunt.com/</link>
+    <description>Recent content on Jack Mordaunt</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 10 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://jackmordaunt.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://jackmordaunt.com/about/</link>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://jackmordaunt.com/about/</guid>
+      <description>&lt;p&gt;I’m Jack, an Australian developer living abroad, building lean, native software in Odin and Go.&lt;/p&gt;&#xA;&lt;p&gt;I care deeply about software that’s organically made and designed to be robust, efficient and promote self-sovereignty.&lt;/p&gt;&#xA;&lt;p&gt;I have a particular interest in long-term software built to last decades.&lt;/p&gt;&#xA;&lt;p&gt;I believe this is best achieved by having a small dependency tree and re-using modular libraries written in C where possible, which is the lowest-common denominator and what drives my interest in Odin: a C alternative built for the joy of programming.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://jackmordaunt.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://jackmordaunt.com/contact/</guid>
+      <description>&lt;div class=&#34;contact-page&#34;&gt;&#xA;  &lt;h2&gt;Get in touch&lt;/h2&gt;&#xA;&#xA;  &lt;form action=&#34;https://api.web3forms.com/submit&#34; method=&#34;POST&#34; class=&#34;contact-form&#34;&gt;&#xA;&#xA;    &lt;!-- Replace with your Access Key --&gt;&#xA;    &lt;input type=&#34;hidden&#34; name=&#34;access_key&#34; value=&#34;1fabf5eb-b95f-48d4-a01e-458e11d53846&#34;&gt;&#xA;&#xA;    &lt;!-- Form Inputs. Each input must have a name=&#34;&#34; attribute --&gt;&#xA;    &lt;input type=&#34;text&#34; name=&#34;name&#34; placeholder=&#34;Name&#34; required&gt;&#xA;    &lt;input type=&#34;email&#34; name=&#34;email&#34; placeholder=&#34;info@example.com&#34; required&gt;&#xA;    &lt;textarea name=&#34;message&#34; placeholder=&#34;Hello!&#34; required&gt;&lt;/textarea&gt;&#xA;&#xA;    &lt;!-- Honeypot Spam Protection --&gt;&#xA;    &lt;input type=&#34;checkbox&#34; name=&#34;botcheck&#34; class=&#34;hidden&#34; style=&#34;display: none;&#34;&gt;&#xA;&#xA;    &lt;!-- Custom Confirmation / Success Page --&gt;&#xA;    &lt;input type=&#34;hidden&#34; name=&#34;redirect&#34; value=&#34;/about&#34;&gt;&#xA;&#xA;    &lt;button type=&#34;submit&#34;&gt;Submit&lt;/button&gt;&#xA;  &lt;/form&gt;&#xA;&lt;/div</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://jackmordaunt.com/pay-with-bitcoin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://jackmordaunt.com/pay-with-bitcoin/</guid>
+      <description>&lt;script&gt;&#xA;  function copyAddress() {&#xA;    const text = document.getElementById(&#34;btc-address&#34;).textContent;&#xA;&#xA;    navigator.clipboard.writeText(text).then(() =&gt; {&#xA;      console.log(&#34;Address copied!&#34;);&#xA;    }).catch(err =&gt; {&#xA;      console.error(&#34;Copy failed:&#34;, err);&#xA;    });&#xA;  }&#xA;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;iframe src=&#34;https://github.com/sponsors/JackMordaunt/card&#34; title=&#34;Sponsor JackMordaunt&#34; height=&#34;225&#34; width=&#34;600&#34; style=&#34;border: 0;&#34;&gt;&lt;/iframe&gt;&#xA;&lt;div class=&#34;btc-card&#34;&gt;&#xA;  &lt;div class=&#34;btc-header&#34;&gt;&#xA;    &lt;i class=&#34;btc-icon fa-brands fa-bitcoin fa-3x&#34;&gt;&lt;/i&gt;&#xA;  &lt;/div&gt;&#xA;&#xA;  &lt;img&#xA;    src=&#34;https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=bitcoin:bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh&#34;&#xA;    alt=&#34;Bitcoin Address QR Code&#34;&#xA;    class=&#34;btc-qr&#34;&#xA;  &gt;&#xA;&#xA;  &lt;div class=&#34;btc-address-row&#34;&gt;&#xA;    &lt;p class=&#34;btc-address&#34; id=&#34;btc-address&#34;&gt;bc1q6px9f0tl3r8qf5l304g2plyae5fgvw6yetzvcu&lt;/p&gt;&#xA;    &lt;button class=&#34;btc-copy-icon&#34; onclick=&#34;copyAddress()&#34;&gt;&#xA;      &lt;i class=&#34;fa-solid fa-copy&#34;&gt;&lt;/i&gt;&#xA;    &lt;/button&gt;&#xA; &lt;/div&gt;&#xA;  &lt;p class=&#34;btc-note&#34;&gt;Scan or copy the address to send Bitcoin&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
