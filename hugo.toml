@@ -22,9 +22,9 @@ style = "github-dark"
   avatarurl = "images/self.jpg"
   gravatar = "gravatar@sovereignlife.anonaddy.com"
 
-  faviconSVG = "/img/favicon.svg"
-  favicon_32 = "/img/favicon-32x32.png"
-  favicon_16 = "/img/favicon-16x16.png"
+  faviconSVG = "/images/self-tiny-white.svg"
+  favicon_32 = "/images/self-tiny-white.png"
+  favicon_16 = "/images/self-tiny-white.png"
 
   since = 2025
 
