@@ -4,9 +4,10 @@
     {{ if .icon }}
       <li>
         <a href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }} {{ if .type }}type="{{ .type }}"{{ end }}>
-          {{ if and .srclight .srcdark -}}
-          <img src="{{ .srclight }}" class="custom-icon custom-icon-light"/>
-          <img src="{{ .srcdark }}" class="custom-icon custom-icon-dark"/>
+          {{ if .src  -}}
+          <img src="{{ .src }}" class="custom-icon "/>
+          {{ else if .svg  -}}
+          <div class="custom-icon">{{ readFile .svg | safeHTML }}</div>
           {{- else -}}
           <i class="{{ .icon }}" aria-hidden="true">
           {{- end }}

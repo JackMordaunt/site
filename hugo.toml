@@ -52,9 +52,7 @@ style = "github-dark"
 [[params.social]]
   name = "Sourcehut"
   icon = "fa-1x"
-  # Hack because sourcehut icon not in fa. Light & Dark are swapped based on theme.
-  srclight = "https://sourcehut.org/sourcehut.svg" 
-  srcdark = "https://sourcehut.org/sourcehut-white.svg"
+  svg = "assets/images/sourcehut.svg"
   weight = 2
   url = "https://git.sr.ht/~jackmordaunt"
 [[params.social]]
