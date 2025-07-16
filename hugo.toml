@@ -36,6 +36,7 @@ style = "github-dark"
   customCSS = ["css/custom.css"]
   # customSCSS = ["scss/custom.scss"]
   # customJS = ["js/custom.js"]
+  #
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -70,10 +71,10 @@ style = "github-dark"
   url = "pay-with-bitcoin/"
 
 # Menu links
-# [[menu.main]]
-#   name = "Blog"
-#   weight = 1
-#   url  = "posts/"
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "posts/"
 [[menu.main]]
   name = "About"
   weight = 2
