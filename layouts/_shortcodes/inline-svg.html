@@ -1,0 +1,4 @@
+{{- $name := .Get "name" -}}
+<div class="custom-icon">
+  {{- readFile (printf "assets/images/%s.svg" $name) | safeHTML -}}
+</div>
