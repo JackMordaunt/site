@@ -7,11 +7,10 @@
           {{ if .src  -}}
           <img src="{{ .src }}" class="custom-icon "/>
           {{ else if .svg  -}}
-          <div class="custom-icon">{{ readFile .svg | safeHTML }}</div>
+          <div class="custom-icon" style="display: inline-block;">{{ readFile .svg | safeHTML }}</div>
           {{- else -}}
-          <i class="{{ .icon }}" aria-hidden="true">
+          <i class="{{ .icon }}" aria-hidden="true"></i>
           {{- end }}
-          </i>
         </a>
       </li>
     {{ else }}
