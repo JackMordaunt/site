@@ -16,15 +16,15 @@ style = "github-dark"
 
 # Required output format for the nostr.json file.
 [outputFormats.nostrjson]
-mediaType = "application/json"
-baseName = "nostr"
-path = ".well-known"
-isPlainText = true
-notAlternative = true
-permalinkable = true
+  mediaType = "application/json"
+  baseName = "nostr"
+  path = ".well-known"
+  isPlainText = true
+  notAlternative = true
+  permalinkable = true
 
 [outputs]
-home = ["HTML", "nostrjson"]
+  home = ["HTML", "nostrjson"]
 
 [params]
   author = "Jack Mordaunt"
@@ -51,7 +51,11 @@ home = ["HTML", "nostrjson"]
 
 [[params.nostr]]
   name = "mordaunt"
-  pub_key = "npub14l0387z0ejfmnn3j38nnalg5p57952d84aqakqguhzx7p7pns2vqg3x78w"
+  npub = "npub14l0387z0ejfmnn3j38nnalg5p57952d84aqakqguhzx7p7pns2vqg3x78w"
+
+[[params.nostr]]
+  name = "jack"
+  npub = "npub14l0387z0ejfmnn3j38nnalg5p57952d84aqakqguhzx7p7pns2vqg3x78w"
 
 [markup.goldmark.renderer]
   unsafe = true
