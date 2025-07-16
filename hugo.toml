@@ -14,6 +14,18 @@ pagerSize = 20
 [markup.highlight]
 style = "github-dark"
 
+# Required output format for the nostr.json file.
+[outputFormats.nostrjson]
+mediaType = "application/json"
+baseName = "nostr"
+path = ".well-known"
+isPlainText = true
+notAlternative = true
+permalinkable = true
+
+[outputs]
+home = ["HTML", "nostrjson"]
+
 [params]
   author = "Jack Mordaunt"
   info = "Coffee developer, software brewer."
@@ -36,7 +48,10 @@ style = "github-dark"
   customCSS = ["css/custom.css"]
   # customSCSS = ["scss/custom.scss"]
   # customJS = ["js/custom.js"]
-  #
+
+[[params.nostr]]
+  name = "mordaunt"
+  pub_key = "npub14l0387z0ejfmnn3j38nnalg5p57952d84aqakqguhzx7p7pns2vqg3x78w"
 
 [markup.goldmark.renderer]
   unsafe = true
