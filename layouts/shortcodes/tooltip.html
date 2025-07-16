@@ -1,0 +1,5 @@
+{{- $tip := .Get "tip" -}}
+<span class="tooltip">
+  {{ .Inner | .Page.RenderString }}
+  <span class="tooltiptext">{{ $tip }}</span>
+</span>
