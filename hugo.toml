@@ -37,6 +37,9 @@ style = "github-dark"
   # customSCSS = ["scss/custom.scss"]
   # customJS = ["js/custom.js"]
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [taxonomies]
   category = "categories"
   series = "series"
