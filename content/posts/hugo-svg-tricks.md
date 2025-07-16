@@ -2,7 +2,7 @@
 draft = false
 date = 2025-07-16T12:08:03-03:00
 title = "Hugo SVG Tricks"
-description = ""
+description = "Styling SVG icons alongside font-awesome icons."
 slug = ""
 authors = ["Jack Mordaunt"]
 tags = ["hugo", "svg", "css"]
