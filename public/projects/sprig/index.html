@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Sprig Arbor Chat Client · Jack Mordaunt
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Jack Mordaunt">
+<meta name="description" content="Arbor Chat client in Go.">
+<meta name="keywords" content="blog,developer,personal,software,robust,performance,sovereign">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sprig Arbor Chat Client">
+  <meta name="twitter:description" content="Arbor Chat client in Go.">
+
+<meta property="og:url" content="http://jackmordaunt.com/projects/sprig/">
+  <meta property="og:site_name" content="Jack Mordaunt">
+  <meta property="og:title" content="Sprig Arbor Chat Client">
+  <meta property="og:description" content="Arbor Chat client in Go.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2022-03-17T17:30:23+00:00">
+    <meta property="article:modified_time" content="2022-03-17T17:30:23+00:00">
+    <meta property="article:tag" content="Go">
+    <meta property="article:tag" content="Gio">
+    <meta property="article:tag" content="Native">
+    <meta property="article:tag" content="Portfolio">
+
+
+
+
+<link rel="canonical" href="http://jackmordaunt.com/projects/sprig/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.6445a802b9389c9660e1b07b724dcf5718b1065ed2d71b4eeaf981cc7cc5fc46.css" integrity="sha256-ZEWoArk4nJZg4bB7ck3PVxixBl7S1xtO6vmBzHzF/EY=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+  
+    
+    <link rel="stylesheet" href="/css/custom.min.931a9d02d6f7655cd0cd50317fac1204e00c54ffd0232085acc957b2db5e1283.css" integrity="sha256-kxqdAtb3ZVzQzVAxf6wSBOAMVP/QIyCFrMlXstteEoM=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/self-tiny-white.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/self-tiny-white.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/self-tiny-white.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://jackmordaunt.com/">
+      Jack Mordaunt
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/pay-with-bitcoin/">Pay</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+    
+      <h1 class="title">
+        <a class="title-link" href="http://jackmordaunt.com/projects/sprig/">
+          Sprig Arbor Chat Client
+        </a>
+      </h1>
+    
+    </header>
+
+    <style>
+.carousel {
+  display: flex;
+  overflow: scroll;
+}
+</style>
+<div class="carousel">
+  <img src="/images/sprig/sprig.webp" alt="Sprig" />
+</div>
+<h2 id="overview">
+  Overview
+  <a class="heading-link" href="#overview">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Built by <a href="https://git.sr.ht/~whereswaldon"  class="external-link" target="_blank" rel="noopener">~whereswaldon</a>, <a href="https://git.sr.ht/~whereswaldon/sprig"  class="external-link" target="_blank" rel="noopener">Sprig</a> is a client for <a href="https://man.sr.ht/~whereswaldon/arborchat"  class="external-link" target="_blank" rel="noopener">Arbor</a>, an open source federated chat platform.<br>
+Sprig is a cross-platform client supporting Windows, macOS, Linux, Android, and iOS.<br>
+It&rsquo;s written in <strong>Go</strong>, using the <a href="https://git.sr.ht/~eliasnaur/gio"  class="external-link" target="_blank" rel="noopener"><strong>Gio</strong></a> immediate-mode UI toolkit.</p>
+<hr>
+<h3 id="my-role">
+  My Role
+  <a class="heading-link" href="#my-role">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>When I joined, Sprig stored each chat message as an individual file on disk. This file-per-message model worked reasonably well on Linux, but resulted in <strong>severely degraded performance</strong> on Windows, where reading thousands of tiny files led to <strong>notably slow startup times</strong>.</p>
+<p>To address this, I migrated the persistence layer from the filesystem to <a href="https://github.com/boltdb/bolt"  class="external-link" target="_blank" rel="noopener"><strong>BoltDB</strong></a>, an embedded key-value store written in Go. This upgrade significantly improved startup performance across all platforms, with the largest gains on Windows.</p>
+<p>In addition to this core performance enhancement, I contributed minor UI improvements and refinements.</p>
+<hr>
+<h3 id="result">
+  Result
+  <a class="heading-link" href="#result">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The app now launches significantly faster, offers a smoother user experience, and maintains cross-platform compatibility—all without sacrificing the simplicity of a local-first storage model.</p>
+<h3 id="platforms">
+  Platforms
+  <a class="heading-link" href="#platforms">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+  <i class="fa-4x fa-brands fa-windows"></i>
+  <i class="fa-4x fa-brands fa-apple"></i>
+  <i class="fa-4x fa-brands fa-linux"></i>
+  <i class="fa-4x fa-brands fa-android"></i>
+</div>
+<h3 id="languages">
+  Languages
+  <a class="heading-link" href="#languages">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+  <img style="max-height: 100px;" src="/images/brands/go.svg"/>
+</div>
+<h3 id="tech">
+  Tech
+  <a class="heading-link" href="#tech">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+  <img style="max-height: 100px;" src="/images/brands/gio.svg" class="invert-me"/>
+  <img style="max-height: 100px;" src="/images/brands/boltdb.webp"/>
+</div>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Jack Mordaunt 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
