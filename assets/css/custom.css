@@ -226,3 +226,13 @@
   opacity: 1;
 }
 
+.invert-me {
+}
+
+.colorscheme-dark .invert-me {
+  fill: white;
+}
+
+.colorscheme-light .invert-me {
+  fill: black;
+}
