@@ -16,9 +16,9 @@ categories = ["development"]
 </style>
 
 <div class="carousel">
-  <img src="/images/plato/PlatoHome.png" alt="Home Page" />
-  <img src="/images/plato/PlatoGame.png" alt="Game Page" />
-  <img src="/images/plato/PlatoMulti.png" alt="Multi Window" />
+  <img src="/images/Plato/PlatoHome.png" alt="Home Page" />
+  <img src="/images/Plato/PlatoGame.png" alt="Game Page" />
+  <img src="/images/Plato/PlatoMulti.png" alt="Multi Window" />
 </div>
 
 
