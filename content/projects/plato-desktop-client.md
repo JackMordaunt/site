@@ -73,7 +73,7 @@ This project demanded **low-level systems programming**, **high-concurrency arch
 ### Tech
 
 <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
-  <img style="max-height: 100px;" src="/images/brands/gio.svg"/>
+  <img style="max-height: 100px;" src="/images/brands/gio.svg" class="invert-me"/>
   <img style="max-height: 100px;" src="/images/brands/sqlite.svg"/>
   <img style="max-height: 100px;" src="/images/brands/opengl.svg"/>
   <img style="max-height: 100px;" src="/images/brands/v8.svg"/>
