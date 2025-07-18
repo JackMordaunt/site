@@ -3,13 +3,40 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://jackmordaunt.com/authors/</loc>
-    <lastmod>2025-07-16T14:57:56-03:00</lastmod>
+    <lastmod>2025-07-17T11:21:04-03:00</lastmod>
   </url><url>
     <loc>http://jackmordaunt.com/categories/</loc>
-    <lastmod>2025-07-16T14:57:56-03:00</lastmod>
+    <lastmod>2025-07-17T11:21:04-03:00</lastmod>
   </url><url>
     <loc>http://jackmordaunt.com/categories/development/</loc>
-    <lastmod>2025-07-16T14:57:56-03:00</lastmod>
+    <lastmod>2025-07-17T11:21:04-03:00</lastmod>
+  </url><url>
+    <loc>http://jackmordaunt.com/tags/gio/</loc>
+    <lastmod>2025-07-17T11:21:04-03:00</lastmod>
+  </url><url>
+    <loc>http://jackmordaunt.com/tags/go/</loc>
+    <lastmod>2025-07-17T11:21:04-03:00</lastmod>
+  </url><url>
+    <loc>http://jackmordaunt.com/</loc>
+    <lastmod>2025-07-17T11:21:04-03:00</lastmod>
+  </url><url>
+    <loc>http://jackmordaunt.com/authors/jack-mordaunt/</loc>
+    <lastmod>2025-07-17T11:21:04-03:00</lastmod>
+  </url><url>
+    <loc>http://jackmordaunt.com/tags/native/</loc>
+    <lastmod>2025-07-17T11:21:04-03:00</lastmod>
+  </url><url>
+    <loc>http://jackmordaunt.com/projects/plato-desktop-client/</loc>
+    <lastmod>2025-07-17T11:21:04-03:00</lastmod>
+  </url><url>
+    <loc>http://jackmordaunt.com/tags/portfolio/</loc>
+    <lastmod>2025-07-17T11:21:04-03:00</lastmod>
+  </url><url>
+    <loc>http://jackmordaunt.com/projects/</loc>
+    <lastmod>2025-07-17T11:21:04-03:00</lastmod>
+  </url><url>
+    <loc>http://jackmordaunt.com/tags/</loc>
+    <lastmod>2025-07-17T11:21:04-03:00</lastmod>
   </url><url>
     <loc>http://jackmordaunt.com/tags/hugo/</loc>
     <lastmod>2025-07-16T14:57:56-03:00</lastmod>
@@ -17,19 +44,10 @@
     <loc>http://jackmordaunt.com/posts/hugo-nip-05/</loc>
     <lastmod>2025-07-16T14:57:56-03:00</lastmod>
   </url><url>
-    <loc>http://jackmordaunt.com/</loc>
-    <lastmod>2025-07-16T14:57:56-03:00</lastmod>
-  </url><url>
-    <loc>http://jackmordaunt.com/authors/jack-mordaunt/</loc>
-    <lastmod>2025-07-16T14:57:56-03:00</lastmod>
-  </url><url>
     <loc>http://jackmordaunt.com/tags/nostr/</loc>
     <lastmod>2025-07-16T14:57:56-03:00</lastmod>
   </url><url>
     <loc>http://jackmordaunt.com/posts/</loc>
-    <lastmod>2025-07-16T14:57:56-03:00</lastmod>
-  </url><url>
-    <loc>http://jackmordaunt.com/tags/</loc>
     <lastmod>2025-07-16T14:57:56-03:00</lastmod>
   </url><url>
     <loc>http://jackmordaunt.com/tags/css/</loc>

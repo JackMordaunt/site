@@ -105,10 +105,14 @@ style = "github-dark"
   weight = 2
   url = "about/"
 [[menu.main]]
-  name = "Contact"
+  name = "Projects"
   weight = 3
+  url = "projects/"
+[[menu.main]]
+  name = "Contact"
+  weight = 4
   url = "contact/"
 [[menu.main]]
   name = "Pay"
-  weight = 4
+  weight = 5
   url = "pay-with-bitcoin/"
