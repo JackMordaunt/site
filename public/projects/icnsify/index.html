@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Icnsify · Jack Mordaunt
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Jack Mordaunt">
+<meta name="description" content="Build and preview .icns icons cross platform.">
+<meta name="keywords" content="blog,developer,personal,software,robust,performance,sovereign">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Icnsify">
+  <meta name="twitter:description" content="Build and preview .icns icons cross platform.">
+
+<meta property="og:url" content="http://jackmordaunt.com/projects/icnsify/">
+  <meta property="og:site_name" content="Jack Mordaunt">
+  <meta property="og:title" content="Icnsify">
+  <meta property="og:description" content="Build and preview .icns icons cross platform.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2018-02-21T12:14:44-03:00">
+    <meta property="article:modified_time" content="2018-02-21T12:14:44-03:00">
+    <meta property="article:tag" content="Go">
+    <meta property="article:tag" content="Gio">
+    <meta property="article:tag" content="Portfolio">
+
+
+
+
+<link rel="canonical" href="http://jackmordaunt.com/projects/icnsify/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.6445a802b9389c9660e1b07b724dcf5718b1065ed2d71b4eeaf981cc7cc5fc46.css" integrity="sha256-ZEWoArk4nJZg4bB7ck3PVxixBl7S1xtO6vmBzHzF/EY=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+  
+    
+    <link rel="stylesheet" href="/css/custom.min.931a9d02d6f7655cd0cd50317fac1204e00c54ffd0232085acc957b2db5e1283.css" integrity="sha256-kxqdAtb3ZVzQzVAxf6wSBOAMVP/QIyCFrMlXstteEoM=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/self-tiny-white.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/self-tiny-white.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/self-tiny-white.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://jackmordaunt.com/">
+      Jack Mordaunt
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/pay-with-bitcoin/">Pay</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+    
+      <h1 class="title">
+        <a class="title-link" href="http://jackmordaunt.com/projects/icnsify/">
+          Icnsify
+        </a>
+      </h1>
+    
+    </header>
+
+    <style>
+.carousel {
+  display: flex;
+  overflow: scroll;
+}
+</style>
+<div class="carousel">
+  <img src="/images/icnsify/icns-macos-preview.webp" alt="icnsify-preview macOS" />
+  <img src="/images/icnsify/icns-windows-preview.webp" alt="icnsify-preview Windows" />
+</div>
+<h2 id="icnsify-a-lean-cross-platform-icon-tool-for-macos-icns-format">
+  icnsify: A Lean, Cross-Platform Icon Tool for macOS <code>.icns</code> Format
+  <a class="heading-link" href="#icnsify-a-lean-cross-platform-icon-tool-for-macos-icns-format">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><a href="https://github.com/JackMordaunt/icns"  class="external-link" target="_blank" rel="noopener">GitHub →</a></p>
+<h3 id="overview">
+  Overview
+  <a class="heading-link" href="#overview">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><code>icnsify</code> is a fast, lightweight utility for creating and previewing <code>.icns</code>
+files—the proprietary Apple Icon Image format—without relying on macOS.</p>
+<p>I built the first version in a Swedish café in 2018 as my first serious
+open-source contribution. Since then, it has grown into a widely used
+tool among developers—especially those building cross-platform apps with
+<a href="https://gioui.org"  class="external-link" target="_blank" rel="noopener">Gio</a>—to automate icon generation as part of their CI
+pipelines or local development.</p>
+<p>The native Apple tool, <code>iconutil</code>, is macOS-only, hard to script, and requires a
+rigid folder structure with pre-sized PNGs. <code>icnsify</code> simplifies this:</p>
+<ul>
+<li><strong>Cross-platform</strong> (runs on Linux, macOS, Windows)</li>
+<li><strong>CLI-first</strong> with support for piping and scripting</li>
+<li><strong>Intelligently resizes a single image</strong> to required sizes</li>
+<li><strong>Auto-converts common formats to PNG</strong></li>
+<li><strong>Preview GUI</strong> for inspecting <code>.icns</code> on any OS</li>
+</ul>
+<p>Install with a single Go command: <code>go install github.com/jackmordaunt/icns/cmd/icnsify@latest</code></p>
+<h3 id="my-role">
+  My Role
+  <a class="heading-link" href="#my-role">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I designed and implemented <code>icnsify</code> from scratch, using the <code>.icns</code> format
+specification and reverse-engineering documentation like the Wikipedia entry.
+Key design goals:</p>
+<ul>
+<li><strong>Keep it lean:</strong> Minimal dependencies, instant startup, small binary</li>
+<li><strong>Make it ergonomic:</strong> Smart defaults, clear CLI, and usable in Unix pipelines</li>
+<li><strong>Simplify a complex task:</strong> Resize and convert images automatically</li>
+<li><strong>Support the ecosystem:</strong> Designed for developers publishing to macOS from any OS</li>
+</ul>
+<h3 id="results">
+  Results
+  <a class="heading-link" href="#results">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><code>icnsify</code> is now used in multiple open-source projects targeting macOS,
+particularly in the Go/Gio ecosystem. It has become a go-to tool for developers
+who value simplicity, cross-platform compatibility, and automation in their
+toolchain.</p>
+<h3 id="used-by">
+  Used By
+  <a class="heading-link" href="#used-by">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+  <a href="https://github.com/fyne-io">
+    <img style="max-height: 100px; border-radius: 8px;" src="/images/brands/fyne-io.webp" alt="Fyne"/>
+  </a>
+  <a href="https://github.com/wailsapp/wails">
+    <img style="max-height: 100px;" src="/images/brands/wails.webp" alt="Wails"/>
+  </a>
+</div>
+<h3 id="platforms">
+  Platforms
+  <a class="heading-link" href="#platforms">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+  <i class="fa-4x fa-brands fa-windows"></i>
+  <i class="fa-4x fa-brands fa-apple"></i>
+  <i class="fa-4x fa-brands fa-linux"></i>
+</div>
+<h3 id="languages">
+  Languages
+  <a class="heading-link" href="#languages">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+  <img style="max-height: 100px;" src="/images/brands/go.svg"/>
+</div>
+<h3 id="tech">
+  Tech
+  <a class="heading-link" href="#tech">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+  <img style="max-height: 100px;" src="/images/brands/gio.svg" class="invert-me"/>
+</div>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Jack Mordaunt 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
