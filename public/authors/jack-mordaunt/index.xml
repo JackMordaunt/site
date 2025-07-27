@@ -6,8 +6,15 @@
     <description>Recent content on Jack Mordaunt</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Jul 2025 11:21:04 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 23 Jul 2025 14:16:55 -0300</lastBuildDate>
     <atom:link href="http://jackmordaunt.com/authors/jack-mordaunt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why People Love to Hate Go</title>
+      <link>http://jackmordaunt.com/posts/why-people-hate-go/</link>
+      <pubDate>Wed, 23 Jul 2025 14:16:55 -0300</pubDate>
+      <guid>http://jackmordaunt.com/posts/why-people-hate-go/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Go is very idiosyncratic, approximating good ideas and relying heavily on data transposition.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;In this opinion article I will higlight why I think people love to hate Go.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ll do so by contrasting Go to Odin. Odin serves as an excellent comparison because the&#xA;syntax is similar in essence (both heavily inspired by Pascal and C).&lt;/p&gt;&#xA;&lt;p&gt;Unlike Go, Odin actually gives you the good ideas in their completeness -&#xA;without a complex type system or giving up any control, and without needing to&#xA;fight the ideas for a decade only to finally concede.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Plato Desktop Client</title>
       <link>http://jackmordaunt.com/projects/plato-desktop-client/</link>
