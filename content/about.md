@@ -6,9 +6,6 @@ date = "2025-07-10"
 author = "Jack Mordaunt"
 +++
 
-
-{{< inline-svg name="australia" >}}
-
 I’m Jack, an Australian developer living abroad, building lean, native software in Odin and Go.
 
 I care deeply about software that’s organically made and designed to be robust, efficient and promote self-sovereignty.
