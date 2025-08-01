@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Jack Mordaunt</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Jul 2025 14:16:55 -0300</lastBuildDate>
+    <lastBuildDate>Fri, 01 Aug 2025 06:26:18 -0300</lastBuildDate>
     <atom:link href="http://jackmordaunt.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is an Interface</title>
+      <link>http://jackmordaunt.com/posts/what-is-an-interface/</link>
+      <pubDate>Fri, 01 Aug 2025 06:26:18 -0300</pubDate>
+      <guid>http://jackmordaunt.com/posts/what-is-an-interface/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Behavioral Polymorphism: The foundation of OOP.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;The &lt;strong&gt;interface&lt;/strong&gt; is the foundation of OOP (Object Oriented Programming).&lt;/p&gt;&#xA;&lt;p&gt;It provides &lt;em&gt;behavioral polymorphism&lt;/em&gt;: constraining a type by its behaviours -&#xA;or more secifically, its method-set.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A &amp;ldquo;method&amp;rdquo; (as termed in OOP langauges) is nothing more than a procedure who&amp;rsquo;s&#xA;first argument is a pointer to the object it is associated with. There is&#xA;nothing special about a method.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Definitions&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Poly&lt;/strong&gt;: many&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Mono&lt;/strong&gt;: singular&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Morphism&lt;/strong&gt;: shape&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Polymorphism&lt;/strong&gt;: having many shapes&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Monomorphism&lt;/strong&gt;: having one shape&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Polymorphic refers to the ability to represent many shapes.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Why People Love to Hate Go</title>
       <link>http://jackmordaunt.com/posts/why-people-hate-go/</link>

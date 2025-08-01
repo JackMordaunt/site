@@ -32,7 +32,7 @@ style = "github-dark"
   description = "Coffee developer, software brewer."
   keywords = "blog,developer,personal,software,robust,performance,sovereign"
   avatarurl = "images/self.jpg"
-  gravatar = "gravatar@sovereignlife.anonaddy.com"
+  # gravatar = "gravatar@sovereignlife.anonaddy.com"
 
   faviconSVG = "/images/self-tiny-white.svg"
   favicon_32 = "/images/self-tiny-white.png"
