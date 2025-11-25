@@ -14,7 +14,7 @@ I have a particular interest in long-term software built to last decades.
 
 I believe this is best achieved by having a small dependency tree and re-using modular libraries written in C where possible, which is the lowest-common denominator and what drives my interest in Odin: a C alternative built for the joy of programming.
 
-That being said, my main expertise is in Go having programmed with it professionally since 2021. Along my journey I have touched a myriad of other languages: Rust, Zig, C++, Python, Ruby, C#, Objective-C, Javascript, Elixir and more.
+That being said, my main expertise is in Go having programmed with it professionally since 2021. Along my journey I have touched a myriad of other languages: Rust, Zig, C++, Python, C#, Java, Objective-C, Javascript, and more.
 
 I'm a versatile developer but I prefer to work on client-side software and I'm intrigued by unorthodox tech stacks.
 
