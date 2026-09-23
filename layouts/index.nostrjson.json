@@ -1,8 +1,0 @@
-{{ $nostr := .Site.Params.nostr }}
-{
-    "names": {
-      {{- range $k, $v := $nostr }}
-        "{{ $v.name }}": "{{ printf "%x" $v.npub }}"{{ if not (eq $k (sub ($nostr | len) 1)) }},{{ end }}
-      {{- end }}
-    }
-}

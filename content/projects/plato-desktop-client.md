@@ -16,9 +16,9 @@ categories = ["development"]
 </style>
 
 <div class="carousel">
-  <img src="/images/Plato/PlatoHome.webp" alt="Home Page" />
-  <img src="/images/Plato/PlatoGame.webp" alt="Game Page" />
-  <img src="/images/Plato/PlatoMulti.webp" alt="Multi Window" />
+  <img src="/site/images/Plato/PlatoHome.webp" alt="Home Page" />
+  <img src="/site/images/Plato/PlatoGame.webp" alt="Game Page" />
+  <img src="/site/images/Plato/PlatoMulti.webp" alt="Multi Window" />
 </div>
 
 
@@ -66,16 +66,16 @@ This project demanded **low-level systems programming**, **high-concurrency arch
 ### Languages
 
 <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
-  <img style="max-height: 100px;" src="/images/brands/go.svg"/>
-  <img style="max-height: 100px;" src="/images/brands/c.png"/>
+  <img style="max-height: 100px;" src="/site/images/brands/go.svg"/>
+  <img style="max-height: 100px;" src="/site/images/brands/c.png"/>
 </div>
 
 ### Tech
 
 <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
-  <img style="max-height: 100px;" src="/images/brands/gio.svg" class="invert-me"/>
-  <img style="max-height: 100px;" src="/images/brands/sqlite.svg"/>
-  <img style="max-height: 100px;" src="/images/brands/opengl.svg"/>
-  <img style="max-height: 100px;" src="/images/brands/v8.svg"/>
+  <img style="max-height: 100px;" src="/site/images/brands/gio.svg" class="invert-me"/>
+  <img style="max-height: 100px;" src="/site/images/brands/sqlite.svg"/>
+  <img style="max-height: 100px;" src="/site/images/brands/opengl.svg"/>
+  <img style="max-height: 100px;" src="/site/images/brands/v8.svg"/>
 </div>
 
