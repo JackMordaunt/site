@@ -1,0 +1,71 @@
+#!/bin/sh
+# subset-fonts - cut FontAwesome down to the icons this site actually uses.
+#
+# The theme ships the whole families: 158 KB of fa-solid and 119 KB of
+# fa-brands, as woff2, for the two dozen glyphs on the site. Both are on
+# the critical path of every page, so they cost more than everything else
+# put together. Subsetted they are about 2 KB each.
+#
+# The full families in themes/hugo-coder/static/fonts are the input and
+# are never modified. The output goes to this project's static/fonts,
+# which Hugo serves in preference to the theme's copy at the same path.
+#
+# TRAP: the subset holds the icons that were in use when this last ran.
+# Use an icon that was not and the glyph is simply absent from the font.
+# Hugo does not read fonts, so nothing fails at build time. Run this
+# after adding an icon.
+set -eu
+
+cd "$(dirname "$0")/.."
+
+for t in hugo pyftsubset woff2_compress; do
+	command -v "$t" >/dev/null || { echo "subset-fonts: need $t" >&2; exit 1; }
+done
+
+full=themes/hugo-coder/static/fonts
+out=static/fonts
+work=$(mktemp -d)
+trap 'rm -rf "$work"' EXIT
+
+# Class names are resolved to codepoints through the built stylesheet
+# rather than the theme's SCSS, because the SCSS keeps them in one file
+# and the v4 aliases the site uses - fa-file-text, fa-question - in
+# another, and only the compiled CSS has applied the second to the first.
+hugo --quiet --destination "$work/public" --cleanDestinationDir
+css=$(find "$work/public/css" -name 'coder.min.*.css' | head -1)
+[ -n "$css" ] || { echo "subset-fonts: no built stylesheet to read codepoints from" >&2; exit 1; }
+
+# Everything the site can name an icon in. A class assembled at runtime
+# from parts would not be found here; nothing does that today.
+icons=$(grep -rhoE 'fa-[a-z0-9-]+' content layouts hugo.toml themes/hugo-coder/layouts 2>/dev/null |
+	sort -u |
+	grep -vE '^fa-(solid|brands|regular|fw|ul|li|stack|[1-9]x|spin|pull-left|pull-right|border|inverse|rotate|flip|lg|sm|xs|[a-z-]+-400|[a-z-]+-900)$')
+
+unicodes=""
+for icon in $icons; do
+	point=$(grep -oE "\.$icon\{--fa:\"\\\\[0-9a-f]+\"" "$css" | head -1 | grep -oE '\\[0-9a-f]+' | tr -d '\\')
+	[ -n "$point" ] || continue
+	unicodes="$unicodes,U+$point"
+done
+unicodes=${unicodes#,}
+[ -n "$unicodes" ] || { echo "subset-fonts: no icons found" >&2; exit 1; }
+
+echo "subset-fonts: keeping $(printf '%s' "$unicodes" | tr ',' '\n' | wc -l) codepoints"
+
+mkdir -p "$out"
+for f in fa-solid-900 fa-brands-400 fa-regular-400; do
+	# Subsetting writes ttf and woff2_compress makes the woff2 from it.
+	# The direct route, pyftsubset --flavor=woff2, wants a brotli module
+	# that this machine's fonttools did not have; woff2_compress ships
+	# with the reference implementation and is one package either way.
+	pyftsubset "$full/$f.ttf" --unicodes="$unicodes" \
+		--layout-features='' --no-hinting --desubroutinize \
+		--output-file="$work/$f.ttf"
+	woff2_compress "$work/$f.ttf" >/dev/null
+	cp "$work/$f.ttf" "$out/$f.ttf"
+	cp "$work/$f.woff2" "$out/$f.woff2"
+	printf '  %-15s %7s -> %6s bytes\n' "$f.woff2" \
+		"$(stat -c%s "$full/$f.woff2")" "$(stat -c%s "$out/$f.woff2")"
+done
+
+cp "$full/LICENSE.txt" "$out/LICENSE.txt"

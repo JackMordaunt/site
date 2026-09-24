@@ -24,12 +24,18 @@ style = "github-dark"
   info = "Coffee developer, software brewer."
   description = "Coffee developer, software brewer."
   keywords = "blog,developer,personal,software,robust,performance,sovereign"
-  avatarurl = "images/self.jpg"
+  # 640px for a 20rem (320px) slot, so it is sharp at 2x and no larger.
+  # The 1196px JPEG it replaced was 530 KB, over half the weight of the
+  # front page. bin/resize-images regenerates it.
+  avatarurl = "images/self.webp"
   # gravatar = "gravatar@sovereignlife.anonaddy.com"
 
-  faviconSVG = "/site/images/self-tiny-white.svg"
-  favicon_32 = "/site/images/self-tiny-white.png"
-  favicon_16 = "/site/images/self-tiny-white.png"
+  # Relative, so relURL resolves them against baseURL: this site is served
+  # under /site/ on mordaunt.dev and at the root on jackmordaunt.com. An
+  # absolute path would be right in exactly one of those places.
+  favicon_32 = "images/favicon-32.png"
+  favicon_16 = "images/favicon-16.png"
+  touchicon  = "images/apple-touch-icon.png"
 
   since = 2025
 

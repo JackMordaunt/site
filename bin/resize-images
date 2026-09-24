@@ -1,0 +1,31 @@
+#!/bin/sh
+# resize-images - regenerate the derived images from their originals.
+#
+# The avatar is displayed in a 20rem (320 px) slot and the favicons at 32
+# and 16 px; the originals are 1196 px and 880 px square. Serving the
+# originals cost 530 KB and 127 KB a page, which was most of the front
+# page's weight.
+#
+# Originals stay in the repository: static/images/self.jpg is the source
+# for the avatar and static/images/self-tiny-white.png for the icons.
+# Neither is referenced by any page.
+set -eu
+
+cd "$(dirname "$0")/.."
+command -v magick >/dev/null || { echo "resize-images: need ImageMagick" >&2; exit 1; }
+
+# 2x the display size, which covers the retina screens this is likely
+# to be read on without paying for a denser one.
+magick static/images/self.jpg -resize 640x640 -strip -quality 75 \
+	-define webp:method=6 static/images/self.webp
+
+for size in 32 16; do
+	magick static/images/self-tiny-white.png -resize ${size}x${size} -strip \
+		static/images/favicon-$size.png
+done
+magick static/images/self-tiny-white.png -resize 180x180 -strip \
+	static/images/apple-touch-icon.png
+
+for f in self.webp favicon-32.png favicon-16.png apple-touch-icon.png; do
+	printf '  %-24s %7s bytes\n' "$f" "$(stat -c%s "static/images/$f")"
+done

@@ -1,0 +1,13 @@
+{{/*
+  Overrides the theme's copy, which falls back to /site.webmanifest,
+  /images/apple-touch-icon.png and /images/safari-pinned-tab.svg - three
+  files this site does not have, so every page asked for three 404s.
+
+  The theme's SVG favicon is gone with them: the only image to hand is a
+  traced silhouette that weighs 119 KB, which is not a price worth paying
+  for a 32-pixel icon. Paths are relative so relURL follows baseURL, which
+  differs between mordaunt.dev/site/ and the jackmordaunt.com build.
+*/}}
+<link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | relURL }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ .Site.Params.favicon_16 | relURL }}" sizes="16x16">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Params.touchicon | relURL }}">

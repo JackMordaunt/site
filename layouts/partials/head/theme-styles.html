@@ -1,0 +1,38 @@
+{{/*
+  Overrides the theme's copy for two reasons.
+
+  The theme preloads its fonts from /fonts/, an absolute path that is only
+  correct when the site is served at the root. This site is served under
+  /site/ on mordaunt.dev, so those three hints fetched the 404 page at the
+  highest priority the browser has, and the real fonts were then discovered
+  from the stylesheet one round trip later. relURL on a *relative* path is
+  what follows baseURL; on a path starting with "/" it is a no-op.
+
+  Only the two families that are actually used are preloaded. fa-regular is
+  referenced by @font-face and by no icon on the site, so it is never
+  fetched unless something asks for it.
+*/}}
+<link rel="preload" href="{{ "fonts/fa-solid-900.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/fa-brands-400.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+
+{{ if hugo.IsServer }}
+  {{ $cssOpts := (dict "targetPath" "css/coder.css" "enableSourceMap" true ) }}
+  {{ $styles := resources.Get "scss/coder.scss" | resources.ExecuteAsTemplate "style.coder.css" . | toCSS $cssOpts }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+{{ else }}
+  {{ $cssOpts := (dict "targetPath" "css/coder.css" ) }}
+  {{ $styles := resources.Get "scss/coder.scss" | resources.ExecuteAsTemplate "style.coder.css" . | toCSS $cssOpts | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+{{ end }}
+
+{{ if .Site.Params.rtl }}
+  {{ if hugo.IsServer }}
+    {{ $cssOpts := (dict "targetPath" "css/coder-rtl.css" "enableSourceMap" true ) }}
+    {{ $styles := resources.Get "scss/coder-rtl.scss" | resources.ExecuteAsTemplate "style.coder-rtl.css" . | toCSS $cssOpts }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+  {{ else }}
+    {{ $cssOpts := (dict "targetPath" "css/coder-rtl.css" ) }}
+    {{ $styles := resources.Get "scss/coder-rtl.scss" | resources.ExecuteAsTemplate "style.coder-rtl.css" . | toCSS $cssOpts | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+  {{ end }}
+{{ end }}
