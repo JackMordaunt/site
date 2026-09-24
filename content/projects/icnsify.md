@@ -15,8 +15,8 @@ categories = ["development"]
 </style>
 
 <div class="carousel">
-  <img src="/site/images/icnsify/icns-macos-preview.webp" alt="icnsify-preview macOS" />
-  <img src="/site/images/icnsify/icns-windows-preview.webp" alt="icnsify-preview Windows" />
+  <img src="/images/icnsify/icns-macos-preview.webp" alt="icnsify-preview macOS" />
+  <img src="/images/icnsify/icns-windows-preview.webp" alt="icnsify-preview Windows" />
 </div>
 
 ## icnsify: A Lean, Cross-Platform Icon Tool for macOS `.icns` Format  
@@ -61,10 +61,10 @@ toolchain.
 
 <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
   <a href="https://github.com/fyne-io">
-    <img style="max-height: 100px; border-radius: 8px;" src="/site/images/brands/fyne-io.webp" alt="Fyne"/>
+    <img style="max-height: 100px; border-radius: 8px;" src="/images/brands/fyne-io.webp" alt="Fyne"/>
   </a>
   <a href="https://github.com/wailsapp/wails">
-    <img style="max-height: 100px;" src="/site/images/brands/wails.webp" alt="Wails"/>
+    <img style="max-height: 100px;" src="/images/brands/wails.webp" alt="Wails"/>
   </a>
 </div>
 
@@ -79,12 +79,12 @@ toolchain.
 ### Languages
 
 <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
-  <img style="max-height: 100px;" src="/site/images/brands/go.svg"/>
+  <img style="max-height: 100px;" src="/images/brands/go.svg"/>
 </div>
 
 ### Tech
 
 <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
-  <img style="max-height: 100px;" src="/site/images/brands/gio.svg" class="invert-me"/>
+  <img style="max-height: 100px;" src="/images/brands/gio.svg" class="invert-me"/>
 </div>
 

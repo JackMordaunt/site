@@ -1,6 +1,13 @@
 baseurl = "https://mordaunt.dev/site/"
 title = "Jack Mordaunt"
 theme = "hugo-coder"
+# Content is written with root-relative image paths, and this site is
+# served from a subdirectory on mordaunt.dev and from the root on
+# jackmordaunt.com. canonifyURLs resolves those paths against whichever
+# baseURL the build was given, so one source tree is correct in both
+# places; without it the project pages 404 their screenshots on one of
+# them, whichever way the paths are written.
+canonifyURLs = true
 languagecode = "en"
 defaultcontentlanguage = "en"
 

@@ -6,7 +6,17 @@ packages:
 tasks:
 - package: |
     cd site
-    hugo
+    # Built against jackmordaunt.com, not the baseURL in hugo.toml, because
+    # a Hugo site bakes its baseURL into every asset path it emits and this
+    # tarball is served at the root of the alias. The canonical home is
+    # mordaunt.dev/site/, which the server builds for itself from this
+    # repository as a flake input and does not take from here - so the
+    # config keeps that URL and only this one build overrides it.
+    #
+    # This goes away when jackmordaunt.com's DNS moves to the server: the
+    # alias is then a path-preserving redirect into mordaunt.dev/site/ and
+    # there is only one copy of the site again.
+    hugo -b https://jackmordaunt.com/
     tar -C public -cvz . > ../site.tar.gz
 - upload: |
     hut pages publish -d jackmordaunt.srht.site site.tar.gz
