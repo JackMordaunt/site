@@ -8,6 +8,7 @@
 {{ with .Params.client }}<dt>client</dt><dd>{{ . }}</dd>{{ end }}
 {{ with .Params.role }}<dt>role</dt><dd>{{ . }}</dd>{{ end }}
 {{ with .Params.year }}<dt>year</dt><dd>{{ . }}</dd>{{ end }}
+{{ with .Params.status }}<dt>status</dt><dd>{{ . }}</dd>{{ end }}
 {{ with .Params.platforms }}<dt>platforms</dt><dd>{{ delimit . ", " }}</dd>{{ end }}
 {{ with .Params.stack }}<dt>stack</dt><dd>{{ delimit . ", " }}</dd>{{ end }}
 {{ with .Params.source }}<dt>source</dt><dd><a href="{{ . }}">{{ . }}</a></dd>{{ end }}

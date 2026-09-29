@@ -5,7 +5,7 @@
 </section>
 {{ if eq .Section "work" }}
 <ul class="proof">
-{{ range .Pages.ByWeight }}<li><a class="pn" href="{{ .RelPermalink }}">{{ .Title }}</a><div><p class="pd">{{ .Description }}</p><div class="pm">{{ with .Params.client }}{{ . }} · {{ end }}{{ .Params.year }}{{ with .Params.platforms }} · {{ delimit . ", " }}{{ end }}</div></div></li>
+{{ range .Pages.ByWeight }}<li><a class="pn" href="{{ .RelPermalink }}">{{ .Title }}</a><div><p class="pd">{{ .Description }}</p><div class="pm">{{ with .Params.client }}{{ . }} · {{ end }}{{ .Params.year }}{{ with .Params.status }} · {{ . | lower }}{{ end }}{{ with .Params.platforms }} · {{ delimit . ", " }}{{ end }}</div></div></li>
 {{ end }}</ul>
 {{ else }}
 <ul class="writing">

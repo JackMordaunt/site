@@ -6,6 +6,7 @@ weight = 2
 client = "Arbor, open source"
 role = "Contributor"
 year = "2022"
+status = "Paused by its author"
 platforms = ["Windows", "macOS", "Linux", "Android", "iOS"]
 stack = ["Go", "Gio", "BoltDB"]
 source = "https://git.sr.ht/~whereswaldon/sprig"
@@ -18,7 +19,8 @@ source = "https://git.sr.ht/~whereswaldon/sprig"
 [Sprig](https://git.sr.ht/~whereswaldon/sprig) is a client for
 [Arbor](https://man.sr.ht/~whereswaldon/arborchat), a federated chat
 platform, written in Go with Gio and shipped to five platforms from one
-codebase.
+codebase. Its author has since put it on ice; the work below is from
+2022.
 
 ## The problem
 

@@ -6,6 +6,7 @@ weight = 1
 client = "Plato Team Inc."
 role = "One of two primary developers"
 year = "2023 to 2025"
+status = "Discontinued in 2025"
 platforms = ["Windows", "macOS", "Linux"]
 stack = ["Go", "Gio", "SQLite", "V8", "ANGLE", "libwebp", "C", "Objective-C"]
 +++
@@ -43,8 +44,8 @@ client receives, not a build it ships.
 
 **Native where it matters.** The Windows COM interfaces for AAC audio
 decoding and toast notifications are written in pure Go, with no cgo.
-The macOS equivalents are Objective-C and C. Two of those pieces are
-now open source on this domain:
+The macOS equivalents are Objective-C and C. The same techniques are
+open source on this domain, in
 [nativeaudio](https://mordaunt.dev/code/nativeaudio/) and
 [go-toast](https://mordaunt.dev/code/go-toast/).
 
@@ -52,4 +53,5 @@ now open source on this domain:
 
 Low-level systems work, a high-concurrency architecture and custom GUI
 tooling, all inside the Go ecosystem and all shipped to people's
-desktops. It is the clearest example of the kind of program I build.
+desktops. The product was discontinued in 2025. It remains the clearest
+example of the kind of program I build.

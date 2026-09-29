@@ -9,10 +9,12 @@ I am Jack Mordaunt, an Australian software developer working remotely.
 I build native desktop software and small, sharp command-line tools, in
 Go since 2021 professionally and in Odin by choice.
 
-The software I want to make is lean, efficient, powerful and sovereign.
-In practice that means a small dependency tree, native platform APIs
-rather than a runtime that pretends they do not exist, and binaries that
-still build and run in a decade. Where a well-made C library already
+The standard I build to is software that is lean, efficient, powerful
+and sovereign. In practice that means a small dependency tree, native
+platform APIs rather than a runtime that pretends they do not exist,
+and binaries meant to build and run a decade on. The oldest thing here,
+[icnsify](../work/icnsify/), is from 2018 and still maintained; the
+rest has that to live up to. Where a well-made C library already
 exists, I bind to it rather than rewrite it, because C is the lowest
 common denominator every platform speaks. That is also what draws me to
 Odin: a C alternative built for the joy of programming.
@@ -20,8 +22,9 @@ Odin: a C alternative built for the joy of programming.
 I prefer client-side work, the kind a person runs on their own machine,
 and I am comfortable a long way down the stack: COM interfaces written
 in pure Go for Windows audio and notifications, Objective-C bridges on
-macOS, FFmpeg linked directly on Linux. Along the way I have worked in
-Rust, Zig, C, C++, Python, Ruby, C#, Objective-C, JavaScript and Elixir.
+macOS, FFmpeg linked directly on Linux. Along the way I have written
+some Rust, Zig, C, C++, Python, Ruby, C#, Objective-C, JavaScript and
+Elixir.
 
 Everything I publish lives at its origin on this domain, mirrored to
 GitHub and sourcehut. The [work](../work/) page has the case studies

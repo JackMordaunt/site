@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="site-hero">
 <h1>Lean, efficient, powerful, sovereign software.</h1>
-<p>Native desktop software and small, sharp tools in Go and Odin. Small dependency trees, native APIs, binaries built to run for decades.</p>
+<p>That is the standard I build to. Native desktop software and small, sharp tools in Go and Odin: small dependency trees, native APIs, binaries meant to run for decades.</p>
 <p class="mono">Jack Mordaunt. Go professionally since 2021. Australian, working remotely.</p>
 <div class="go"><a href="{{ "work/" | relURL }}">Work</a><a href="https://{{ .Site.Params.domain }}/code/">Code</a><a href="{{ "about/" | relURL }}">About</a><a href="{{ "contact/" | relURL }}">Contact</a></div>
 </section>
@@ -10,7 +10,7 @@
 <section class="site-sec">
 <div class="group-head"><h2>Work</h2><span class="n"><a href="{{ "work/" | relURL }}">all</a></span></div>
 <ul class="proof">
-{{ range first 3 . }}<li><a class="pn" href="{{ .RelPermalink }}">{{ .Title }}</a><div><p class="pd">{{ .Description }}</p><div class="pm">{{ with .Params.client }}{{ . }} · {{ end }}{{ .Params.year }}{{ with .Params.platforms }} · {{ delimit . ", " }}{{ end }}</div></div></li>
+{{ range first 3 . }}<li><a class="pn" href="{{ .RelPermalink }}">{{ .Title }}</a><div><p class="pd">{{ .Description }}</p><div class="pm">{{ with .Params.client }}{{ . }} · {{ end }}{{ .Params.year }}{{ with .Params.status }} · {{ . | lower }}{{ end }}{{ with .Params.platforms }} · {{ delimit . ", " }}{{ end }}</div></div></li>
 {{ end }}</ul>
 </section>
 {{ end }}{{ end }}

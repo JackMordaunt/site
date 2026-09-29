@@ -6,6 +6,7 @@ weight = 3
 client = "Open source"
 role = "Author"
 year = "2018 to now"
+status = "Maintained"
 platforms = ["Windows", "macOS", "Linux"]
 stack = ["Go", "Gio"]
 source = "https://mordaunt.dev/code/icns/"
@@ -31,10 +32,9 @@ previews an `.icns` on any operating system.
 
 ## Where it is used
 
-Projects building macOS applications from Linux and Windows, including
 [Fyne](https://github.com/fyne-io) and
-[Wails](https://github.com/wailsapp/wails), generate their icons with it
-in CI. I wrote the first version in a café in Sweden in 2018 as my first
+[Wails](https://github.com/wailsapp/wails) generate their icons with it
+when building macOS applications from Linux and Windows. I wrote the first version in a café in Sweden in 2018 as my first
 serious open-source release, from the format specification and public
 documentation, and it has been maintained since.
 
