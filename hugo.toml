@@ -30,6 +30,9 @@ pagerSize = 20
   # is the name a local build links, and what the alias build fetches.
   designcss = "/assets/design.css"
   domain = "mordaunt.dev"
+  # The family motto, Aeneid IX.187, set in the footer of every page.
+  motto = "Nec placida contenta quiete est"
+  motto_en = "Not content with quiet rest"
   # The NIP-05 name is "_", the root identifier, which clients show as the bare domain.
   nip05 = "mordaunt.dev"
   npub = "npub14l0387z0ejfmnn3j38nnalg5p57952d84aqakqguhzx7p7pns2vqg3x78w"

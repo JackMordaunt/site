@@ -60,3 +60,9 @@ and the [code](https://mordaunt.dev/code/) index has the repositories.
 
 [Get in touch](../contact/) if you have a program that needs to be
 small, native and built to last.
+
+---
+
+Mordaunt is Norman French for biting, as in a remark. The family motto
+is a line of Virgil, *Nec placida contenta quiete est*: not content with
+quiet rest. The work is built in that spirit.
