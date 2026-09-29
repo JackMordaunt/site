@@ -1,121 +1,58 @@
 baseurl = "https://mordaunt.dev/site/"
 title = "Jack Mordaunt"
-theme = "hugo-coder"
 # Content is written with root-relative image paths, and this site is
 # served from a subdirectory on mordaunt.dev and from the root on
 # jackmordaunt.com. canonifyURLs resolves those paths against whichever
 # baseURL the build was given, so one source tree is correct in both
-# places; without it the project pages 404 their screenshots on one of
-# them, whichever way the paths are written.
+# places.
 canonifyURLs = true
 languagecode = "en"
 defaultcontentlanguage = "en"
+disableKinds = ["taxonomy", "term"]
 
 [pagination]
 pagerSize = 20
 
-[services]
-# [services.disqus]
-# shortname = "yourdiscussshortname"
+[markup.goldmark.renderer]
+  # Posts embed SVG and the odd element Markdown has no spelling for.
+  unsafe = true
 
 [markup.highlight]
-style = "github-dark"
-
-# Content pages written as .html (about, contact, pay-with-bitcoin). Hugo's
-# default policy allows everything but text/html; this allowlist admits it.
-[security]
-  allowContent = ["^text/(html|markdown)$"]
+  # Classes, not inline colours: the stylesheet colours code from the
+  # same tokens as everything else, in both modes.
+  noClasses = false
 
 [params]
   author = "Jack Mordaunt"
-  info = "Coffee developer, software brewer."
-  description = "Coffee developer, software brewer."
-  keywords = "blog,developer,personal,software,robust,performance,sovereign"
-  # 640px for a 20rem (320px) slot, so it is sharp at 2x and no larger.
-  # The 1196px JPEG it replaced was 530 KB, over half the weight of the
-  # front page. bin/resize-images regenerates it.
-  avatarurl = "images/self.webp"
-  # gravatar = "gravatar@sovereignlife.anonaddy.com"
-
-  # Relative, so relURL resolves them against baseURL: this site is served
-  # under /site/ on mordaunt.dev and at the root on jackmordaunt.com. An
-  # absolute path would be right in exactly one of those places.
+  description = "Lean, efficient, powerful, sovereign software. Native desktop software and small, sharp tools in Go and Odin."
+  # The domain's one stylesheet, served by mordaunt.dev. The server's
+  # build passes the content-hashed name in HUGO_PARAMS_DESIGNCSS; this
+  # is the name a local build links, and what the alias build fetches.
+  designcss = "/assets/design.css"
+  domain = "mordaunt.dev"
+  # The NIP-05 name is "_", the root identifier, which clients show as the bare domain.
+  nip05 = "mordaunt.dev"
+  npub = "npub14l0387z0ejfmnn3j38nnalg5p57952d84aqakqguhzx7p7pns2vqg3x78w"
+  lightning = "jack@mordaunt.dev"
+  github = "https://github.com/JackMordaunt"
+  sourcehut = "https://git.sr.ht/~jackmordaunt"
   favicon_32 = "images/favicon-32.png"
   favicon_16 = "images/favicon-16.png"
   touchicon  = "images/apple-touch-icon.png"
 
-  since = 2025
-
-  enableTwemoji = true
-
-  colorScheme = "auto"
-  hidecolorschemetoggle = false
-
-  customCSS = ["css/custom.css"]
-  # customSCSS = ["scss/custom.scss"]
-  # customJS = ["js/custom.js"]
-
-[markup.goldmark.renderer]
-  unsafe = true
-
-[taxonomies]
-  category = "categories"
-  series = "series"
-  tag = "tags"
-  author = "authors"
-
-# Social links
-[[params.social]]
-  name = "Github"
-  icon = "fa-brands fa-github fa-2x"
-  weight = 1
-  url = "https://github.com/jackmordaunt"
-[[params.social]]
-  name = "Sourcehut"
-  icon = "fa-1x"
-  svg = "assets/images/sourcehut.svg"
-  weight = 2
-  url = "https://git.sr.ht/~jackmordaunt"
-[[params.social]]
-  name = "nostr"
-  icon = "fa-1x"
-  svg = "assets/images/nostr.svg"
-  weight = 3
-  url = "https://njump.me/npub14l0387z0ejfmnn3j38nnalg5p57952d84aqakqguhzx7p7pns2vqg3x78w"
-[[params.social]]
-  name = "Code"
-  icon = "fa-solid fa-code-branch fa-2x"
-  weight = 4
-  url = "https://mordaunt.dev/code"
-[[params.social]]
-  name = "Public Keys"
-  icon = "fa-solid fa-key fa-2x"
-  weight = 5
-  url = "https://mordaunt.dev/keys"
-[[params.social]]
-  name = "Bitcoin"
-  icon = "fa-brands fa-bitcoin fa-2x"
-  weight = 6
-  url = "pay-with-bitcoin/"
-
-# Menu links
 [[menu.main]]
-  name = "Blog"
+  name = "Work"
   weight = 1
-  url  = "posts/"
+  url = "work/"
+[[menu.main]]
+  name = "Writing"
+  weight = 2
+  url = "posts/"
 [[menu.main]]
   name = "About"
-  weight = 2
-  url = "about/"
-[[menu.main]]
-  name = "Projects"
   weight = 3
-  url = "projects/"
+  url = "about/"
 [[menu.main]]
   name = "Contact"
   weight = 4
   url = "contact/"
-[[menu.main]]
-  name = "Pay"
-  weight = 5
-  url = "pay-with-bitcoin/"

@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="page-head">
+<h1>{{ .Title }}</h1>
+{{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+</section>
+<article class="prose">{{ .Content }}</article>
+{{/* web3forms relays the message by email; the one third party on the
+     domain, and only on this page. The redirect is relative to this
+     site, not the domain root. */}}
+<form class="form" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="1fabf5eb-b95f-48d4-a01e-458e11d53846">
+<input type="hidden" name="redirect" value="{{ "thanks/" | absURL }}">
+<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" hidden>
+<label>Name<input type="text" name="name" id="name" required autocomplete="name"></label>
+<label>Email<input type="email" name="email" id="email" required autocomplete="email"></label>
+<label>Message<textarea name="message" id="message" required></textarea></label>
+<button type="submit">Send</button>
+</form>
+{{ end }}

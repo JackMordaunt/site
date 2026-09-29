@@ -16,6 +16,8 @@ tasks:
     # This goes away when jackmordaunt.com's DNS moves to the server: the
     # alias is then a path-preserving redirect into mordaunt.dev/site/ and
     # there is only one copy of the site again.
+    # The stylesheet and fonts are linked from mordaunt.dev with a full
+    # URL, so this copy needs no assets of its own.
     hugo -b https://jackmordaunt.com/
     tar -C public -cvz . > ../site.tar.gz
 - upload: |

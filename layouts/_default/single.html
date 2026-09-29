@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="page-head">
+<h1>{{ .Title }}</h1>
+{{/* A date and a reading time are facts about a post; a page such as
+     About has neither worth stating. */}}
+{{ if eq .Section "posts" }}<div class="meta"><span>{{ .Date.Format "2006-01-02" }}</span>{{ with .Params.tags }}<span>{{ delimit . " · " }}</span>{{ end }}<span>{{ .ReadingTime }} min</span></div>{{ end }}
+{{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+</section>
+<article class="prose">
+{{ .Content }}
+</article>
+{{ end }}

@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="page-head">
+<h1>{{ .Title }}</h1>
+{{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+</section>
+{{ if eq .Section "work" }}
+<ul class="proof">
+{{ range .Pages.ByWeight }}<li><a class="pn" href="{{ .RelPermalink }}">{{ .Title }}</a><div><p class="pd">{{ .Description }}</p><div class="pm">{{ with .Params.client }}{{ . }} · {{ end }}{{ .Params.year }}{{ with .Params.platforms }} · {{ delimit . ", " }}{{ end }}</div></div></li>
+{{ end }}</ul>
+{{ else }}
+<ul class="writing">
+{{ range .Pages }}<li><span class="d">{{ .Date.Format "2006-01-02" }}</span><span><a class="t" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Description }}<span class="s">{{ . }}</span>{{ end }}</span></li>
+{{ end }}</ul>
+{{ end }}
+<div class="site-sec"></div>
+{{ end }}

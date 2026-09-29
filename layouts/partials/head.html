@@ -1,0 +1,30 @@
+{{- $title := .Site.Title -}}
+{{- if not .IsHome }}{{ $title = printf "%s · %s" .Title .Site.Title }}{{ end -}}
+{{- $desc := .Description | default .Site.Params.description -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Params.domain }}">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
+<link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | relURL }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ .Site.Params.favicon_16 | relURL }}" sizes="16x16">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Params.touchicon | relURL }}">
+{{/* The domain's one stylesheet and its two faces, served by mordaunt.dev
+     at /assets; the code pages link the same files. With scheme and host,
+     not root-relative: canonifyURLs rewrites a root-relative path under
+     this site's baseURL, which put the stylesheet at /site/assets and
+     left every page unstyled. The full URL also serves the alias domain,
+     whose copy of the site loads the same files cross-origin. The name
+     carries a content hash the server passes in; a build without it
+     links the unhashed name, which the server keeps current. */}}
+{{- $assets := printf "https://%s" .Site.Params.domain -}}
+<link rel="preload" href="{{ $assets }}/assets/fonts/serif-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ $assets }}/assets/fonts/mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ $assets }}{{ .Site.Params.designcss }}">
