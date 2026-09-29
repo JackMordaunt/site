@@ -34,14 +34,16 @@ know that world well enough to choose native on purpose.
 I write software with coding agents, and I hold the result to the same
 standard as anything written by hand. An agent is fast and confidently
 wrong, so the useful engineering is in the mechanisms around it:
-[review](https://mordaunt.dev/code/review/) reads every change against
-a set of rules before it is committed, and measures the commit message
-too; [brain-cli](https://mordaunt.dev/code/brain-cli/) gives agents a
-shared memory of what was decided and why, so nothing is re-argued and
-nothing is quietly redone; and every change to this domain's server
-boots the real configuration in a virtual machine and walks it as a
-browser, the go tool and git would, before it ships. The techniques
-move quickly and I move with them. The gate does not.
+[review](https://mordaunt.dev/code/review/) is a hybrid gate, static
+checks and narrow model readers, that gives an agentic loop fast,
+converging feedback on every change before it is committed, and measures
+the commit message too;
+[brain-cli](https://mordaunt.dev/code/brain-cli/) gives agents a shared
+memory of what was decided and why, so nothing is re-argued and nothing
+is quietly redone; and every change to this domain's server boots the
+real configuration in a virtual machine and walks it as a browser, the
+go tool and git would, before it ships. The techniques move quickly and
+I move with them. The gate does not.
 
 ## Direction
 
