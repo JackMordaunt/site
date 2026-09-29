@@ -12,6 +12,23 @@
 <meta property="og:site_name" content="{{ .Site.Params.domain }}">
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="{{ .Permalink }}">
+{{/* Structured data for the person, on the pages that are about the
+     person: the front page and About. sameAs is what a search engine or
+     an agent uses to tie this name to the accounts and the git origin. */}}
+{{- if or .IsHome (eq .RelPermalink ("about/" | relURL)) -}}
+{{- $p := .Site.Params -}}
+{{- $person := dict
+  "@context" "https://schema.org"
+  "@type" "Person"
+  "name" $p.author
+  "jobTitle" "Software developer"
+  "description" $p.description
+  "url" .Site.Home.Permalink
+  "image" ("images/portrait.webp" | absURL)
+  "sameAs" (slice $p.github $p.sourcehut (printf "https://njump.me/%s" $p.npub) (printf "https://%s/code/" $p.domain))
+-}}
+<script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
+{{- end }}
 {{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
 <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | relURL }}" sizes="32x32">
 <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_16 | relURL }}" sizes="16x16">
