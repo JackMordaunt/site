@@ -1,22 +1,30 @@
-
 +++
 title = "About"
-description = "Jack Mordaunt"
-date = "2025-07-10"
-author = "Jack Mordaunt"
+description = "Jack Mordaunt builds native desktop software and small, sharp tools in Go and Odin."
+date = "2026-09-28"
 +++
 
-I’m Jack, an Australian developer living abroad, building lean, native software in Odin and Go.
+I am Jack Mordaunt, an Australian software developer working remotely.
+I build native desktop software and small, sharp command-line tools, in
+Go since 2021 professionally and in Odin by choice.
 
-I care deeply about software that’s organically made and designed to be robust, efficient and promote self-sovereignty.
+The software I want to make is lean, efficient, powerful and sovereign.
+In practice that means a small dependency tree, native platform APIs
+rather than a runtime that pretends they do not exist, and binaries that
+still build and run in a decade. Where a well-made C library already
+exists, I bind to it rather than rewrite it, because C is the lowest
+common denominator every platform speaks. That is also what draws me to
+Odin: a C alternative built for the joy of programming.
 
-I have a particular interest in long-term software built to last decades.
+I prefer client-side work, the kind a person runs on their own machine,
+and I am comfortable a long way down the stack: COM interfaces written
+in pure Go for Windows audio and notifications, Objective-C bridges on
+macOS, FFmpeg linked directly on Linux. Along the way I have worked in
+Rust, Zig, C, C++, Python, Ruby, C#, Objective-C, JavaScript and Elixir.
 
-I believe this is best achieved by having a small dependency tree and re-using modular libraries written in C where possible, which is the lowest-common denominator and what drives my interest in Odin: a C alternative built for the joy of programming.
+Everything I publish lives at its origin on this domain, mirrored to
+GitHub and sourcehut. The [work](../work/) page has the case studies
+and the [code](https://mordaunt.dev/code/) index has the repositories.
 
-That being said, my main expertise is in Go having programmed with it professionally since 2021. Along my journey I have touched a myriad of other languages: Rust, Zig, C++, Python, C#, Java, Objective-C, Javascript, and more.
-
-I'm a versatile developer but I prefer to work on client-side software and I'm intrigued by unorthodox tech stacks.
-
-[Get in contact](/contact)
-
+[Get in touch](../contact/) if you have a program that needs to be
+small, native and built to last.
