@@ -1,14 +1,14 @@
 +++
 title = "About"
-description = "Jack Mordaunt builds native desktop software and small, sharp tools in Go, Odin and Rust."
+description = "Jack Mordaunt builds native desktop software and small, sharp tools in Go and Odin."
 date = "2026-09-28"
 portrait = "images/portrait.webp"
 +++
 
 I am Jack Mordaunt, an Australian software developer working remotely.
-I build native desktop software and small, sharp command-line tools: in
-Go since 2021 professionally, in Odin by choice, and in Rust where it
-fits.
+I build native desktop software and small, sharp command-line tools. I
+work in Go and Odin by choice, Rust and C where they fit, and TypeScript
+when the program is a web page.
 
 The standard I build to is software that is lean, efficient, powerful
 and sovereign. In practice that means a small dependency tree, native
@@ -23,8 +23,7 @@ Odin: a C alternative built for the joy of programming.
 I prefer client-side work, the kind a person runs on their own machine,
 and I am comfortable a long way down the stack: COM interfaces written
 in pure Go for Windows audio and notifications, Objective-C bridges on
-macOS, FFmpeg linked directly on Linux. My languages are Go, Odin and Rust, and the web when a program
-needs one.
+macOS, FFmpeg linked directly on Linux.
 
 Everything I publish lives at its origin on this domain, mirrored to
 GitHub and sourcehut. The [work](../work/) page has the case studies

@@ -24,7 +24,7 @@ pagerSize = 20
 
 [params]
   author = "Jack Mordaunt"
-  description = "Lean, efficient, powerful, sovereign software: the standard Jack Mordaunt builds native desktop software and small, sharp tools to, in Go, Odin and Rust."
+  description = "Lean, efficient, powerful, sovereign software: the standard Jack Mordaunt builds native desktop software and small, sharp tools to, in Go and Odin."
   # The domain's one stylesheet, served by mordaunt.dev. The server's
   # build passes the content-hashed name in HUGO_PARAMS_DESIGNCSS; this
   # is the name a local build links, and what the alias build fetches.
