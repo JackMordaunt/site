@@ -2,6 +2,7 @@
 title = "About"
 description = "Jack Mordaunt builds native desktop software and small, sharp tools in Go and Odin."
 date = "2026-09-28"
+portrait = "images/portrait.webp"
 +++
 
 I am Jack Mordaunt, an Australian software developer working remotely.

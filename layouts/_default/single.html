@@ -1,10 +1,15 @@
 {{ define "main" }}
-<section class="page-head">
+<section class="page-head{{ if .Params.portrait }} with-portrait{{ end }}">
+{{/* Two sizes: the 160 for ordinary screens, the 320 for dense ones,
+     which is the largest the slot ever needs. */}}
+{{ with .Params.portrait }}<img class="portrait" src="{{ replace . ".webp" "-160.webp" | relURL }}" srcset="{{ . | relURL }} 2x" alt="{{ $.Site.Params.author }}" width="160" height="160">{{ end }}
+<div>
 <h1>{{ .Title }}</h1>
 {{/* A date and a reading time are facts about a post; a page such as
      About has neither worth stating. */}}
 {{ if eq .Section "posts" }}<div class="meta"><span>{{ .Date.Format "2006-01-02" }}</span>{{ with .Params.tags }}<span>{{ delimit . " · " }}</span>{{ end }}<span>{{ .ReadingTime }} min</span></div>{{ end }}
 {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+</div>
 </section>
 <article class="prose">
 {{ .Content }}
