@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{/* Served by Caddy for every 404 on the domain, at whatever path was
+     asked for, so every link here is absolute: a relative one would
+     resolve against the missing address. */}}
+<section class="page-head">
+<h1>Not found</h1>
+<p class="lede">Nothing lives at this address. It may be an import path that is not a package, a repository that is private, or a page that has moved.</p>
+</section>
+<article class="prose">
+<p>Try the <a href="{{ "" | absURL }}">front page</a>, the <a href="{{ "work/" | absURL }}">work</a>, or the <a href="https://{{ .Site.Params.domain }}/code/">code index</a>.</p>
+</article>
+{{ end }}
