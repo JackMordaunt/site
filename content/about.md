@@ -29,20 +29,12 @@ Day to day I also work full stack on the web: several front ends, a
 Postgres backend and four third-party integrations between them. I
 know that world well enough to choose native on purpose.
 
-The world I am building toward is a native stack that beats the web on
-resources and competes with it on delivery. That means updates shipped
-as tiny patches, so releasing is frictionless; a GUI rendered on the
-CPU, for the least resource use and the widest compatibility; and a
-WebAssembly target that turns the same program into a progressive web
-app, so it meets the browser on its own ground and on its own terms.
-And it means offline first: a program that runs on the machine in
-front of you, keeps your data there, and never monetises it, because
-the surest way not to leak data is never to hold it. Some of it
-exists: the Plato client shipped its updates as binary
-patches, and [jm](https://mordaunt.dev/code/jm/) updates itself. Patch
-updates in jm, the CPU renderer and the browser target are ahead of
-me, not behind. The browser should be for web pages. Applications
-belong to the machine.
+I am building toward a native stack that beats the web on resources
+and competes with it on delivery: patch updates, a CPU-rendered GUI,
+and a WebAssembly target that meets the browser on its own ground.
+Offline first, with your data kept on your machine and never monetised,
+because the surest way not to leak data is never to hold it. The
+browser should be for web pages; applications belong to the machine.
 
 Everything I publish lives at its origin on this domain, mirrored to
 GitHub and sourcehut. The [work](../work/) page has the case studies
