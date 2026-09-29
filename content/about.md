@@ -35,7 +35,10 @@ as tiny patches, so releasing is frictionless; a GUI rendered on the
 CPU, for the least resource use and the widest compatibility; and a
 WebAssembly target that turns the same program into a progressive web
 app, so it meets the browser on its own ground and on its own terms.
-Some of it exists: the Plato client shipped its updates as binary
+And it means offline first: a program that runs on the machine in
+front of you, keeps your data there, and never monetises it, because
+the surest way not to leak data is never to hold it. Some of it
+exists: the Plato client shipped its updates as binary
 patches, and [jm](https://mordaunt.dev/code/jm/) updates itself. Patch
 updates in jm, the CPU renderer and the browser target are ahead of
 me, not behind. The browser should be for web pages. Applications
