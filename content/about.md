@@ -25,6 +25,22 @@ and I am comfortable a long way down the stack: COM interfaces written
 in pure Go for Windows audio and notifications, Objective-C bridges on
 macOS, FFmpeg linked directly on Linux.
 
+Day to day I also work full stack on the web: several front ends, a
+Postgres backend and four third-party integrations between them. I
+know that world well enough to choose native on purpose.
+
+The world I am building toward is a native stack that beats the web on
+resources and competes with it on delivery. That means updates shipped
+as tiny patches, so releasing is frictionless; a GUI rendered on the
+CPU, for the least resource use and the widest compatibility; and a
+WebAssembly target that turns the same program into a progressive web
+app, so it meets the browser on its own ground and on its own terms.
+Some of it exists: the Plato client shipped its updates as binary
+patches, and [jm](https://mordaunt.dev/code/jm/) updates itself. Patch
+updates in jm, the CPU renderer and the browser target are ahead of
+me, not behind. The browser should be for web pages. Applications
+belong to the machine.
+
 Everything I publish lives at its origin on this domain, mirrored to
 GitHub and sourcehut. The [work](../work/) page has the case studies
 and the [code](https://mordaunt.dev/code/) index has the repositories.
