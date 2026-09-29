@@ -29,6 +29,18 @@ Day to day I also work full stack on the web: several front ends, a
 Postgres backend and four third-party integrations between them. I
 know that world well enough to choose native on purpose.
 
+I develop with coding agents, heavily, and I build the mechanisms that
+keep the result honest. Agents are fast and confidently wrong, so the
+engineering is in the ratchet around them:
+[review](https://mordaunt.dev/code/review/) reads every change against
+a set of rules before it is committed, and measures the commit message
+too; [brain-cli](https://mordaunt.dev/code/brain-cli/) gives them a
+shared memory of what was decided and why, so nothing is re-argued;
+and every change to this domain's server boots the real configuration
+in a virtual machine and walks it as a browser, the go tool and git
+would, before it ships. The aim is velocity with precision: more
+shipped, nothing unreviewed.
+
 I am building toward a native stack that beats the web on resources
 and competes with it on delivery: patch updates, a CPU-rendered GUI,
 and a WebAssembly target that meets the browser on its own ground.
