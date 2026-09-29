@@ -4,16 +4,17 @@
 {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
 </section>
 <article class="prose">{{ .Content }}</article>
-{{/* web3forms relays the message by email; the one third party on the
-     domain, and only on this page. The redirect is relative to this
-     site, not the domain root. */}}
-<form class="form" action="https://api.web3forms.com/submit" method="POST">
-<input type="hidden" name="access_key" value="1fabf5eb-b95f-48d4-a01e-458e11d53846">
-<input type="hidden" name="redirect" value="{{ "thanks/" | absURL }}">
-<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" hidden>
-<label>Name<input type="text" name="name" id="name" required autocomplete="name"></label>
-<label>Email<input type="email" name="email" id="email" required autocomplete="email"></label>
-<label>Message<textarea name="message" id="message" required></textarea></label>
+{{/* The form posts to mordaunt.dev's own contact service, which spools
+     the message and forwards it by email; nothing on this page talks to
+     a third party. The action is absolute so the alias domain's copy of
+     the site posts to the same place. The website field is a honeypot:
+     hidden from people and from screen readers, and filled only by
+     bots, whose message is then dropped. */}}
+<form class="form" action="https://{{ .Site.Params.domain }}/contact" method="POST">
+<label>Name<input type="text" name="name" required maxlength="200" autocomplete="name"></label>
+<label>Email<input type="email" name="email" required maxlength="254" autocomplete="email"></label>
+<label>Message<textarea name="message" required maxlength="20000"></textarea></label>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
 <button type="submit">Send</button>
 </form>
 {{ end }}
