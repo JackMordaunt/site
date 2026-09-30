@@ -1,5 +1,5 @@
 +++
-title = "Plato desktop client"
+title = "Plato"
 description = "A multi-window desktop game client in Go, with native audio and notifications on Windows and macOS."
 date = 2025-07-17
 weight = 1
