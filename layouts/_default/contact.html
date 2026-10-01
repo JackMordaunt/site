@@ -9,12 +9,84 @@
      a third party. The action is absolute so the alias domain's copy of
      the site posts to the same place. The website field is a honeypot:
      hidden from people and from screen readers, and filled only by
-     bots, whose message is then dropped. */}}
-<form class="form" action="https://{{ .Site.Params.domain }}/contact" method="POST">
+     bots, whose message is then dropped.
+
+     The script is the form's proof of work. From the first keystroke it
+     fetches a challenge and has the browser search for a nonce whose
+     SHA-256 with it starts with the challenge's number of zero bits, a
+     second or two while the visitor types; a bot that posts the form
+     without running the page has nothing to send. The service checks
+     the work, and refuses a challenge answered within seconds of being
+     issued, a day old, or used before; the script waits out the first. Going back to the form after a
+     refusal fetches a fresh one, since the old one may be spent. */}}
+<form class="form" id="contact" action="https://{{ .Site.Params.domain }}/contact" method="POST">
 <label>Name<input type="text" name="name" required maxlength="200" autocomplete="name"></label>
 <label>Email<input type="email" name="email" required maxlength="254" autocomplete="email"></label>
 <label>Message<textarea name="message" required maxlength="20000"></textarea></label>
 <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
+<input type="hidden" name="challenge">
+<input type="hidden" name="nonce">
+<noscript><p>This form needs JavaScript: your browser spends a few seconds of work on each message, which keeps spam out.</p></noscript>
 <button type="submit">Send</button>
 </form>
+<script>
+(() => {
+  const form = document.getElementById("contact");
+  const button = form.querySelector("button");
+  const enc = new TextEncoder();
+  let work = null;
+
+  async function solve() {
+    const t0 = Date.now();
+    const res = await fetch("https://{{ .Site.Params.domain }}/contact/challenge", { cache: "no-store" });
+    const { challenge } = await res.json();
+    const need = Number(challenge.split(".")[1]);
+    const zeros = (h) => {
+      let n = 0;
+      for (const b of new Uint8Array(h)) {
+        if (b) return n + Math.clz32(b) - 24;
+        n += 8;
+      }
+      return n;
+    };
+    for (let base = 0; ; base += 1000) {
+      const batch = [];
+      for (let i = base; i < base + 1000; i++) {
+        batch.push(crypto.subtle.digest("SHA-256", enc.encode(challenge + ":" + i)));
+      }
+      const hashes = await Promise.all(batch);
+      const i = hashes.findIndex((h) => zeros(h) >= need);
+      if (i >= 0) {
+        // The service refuses work sent within 3 s of its challenge, as
+        // too fast for a person; one who pastes a message waits it out.
+        await new Promise((ok) => setTimeout(ok, Math.max(0, 3500 - (Date.now() - t0))));
+        form.elements.challenge.value = challenge;
+        form.elements.nonce.value = String(base + i);
+        return;
+      }
+    }
+  }
+  const start = () => (work ??= solve().catch(() => {}));
+
+  form.addEventListener("input", start, { once: true });
+  form.addEventListener("submit", async (e) => {
+    if (form.elements.nonce.value) return;
+    e.preventDefault();
+    button.disabled = true;
+    button.textContent = "Working\u2026";
+    await start();
+    form.submit();
+  });
+  // A page restored from the back/forward cache holds a challenge the
+  // service may already have spent.
+  window.addEventListener("pageshow", (e) => {
+    if (!e.persisted) return;
+    form.elements.challenge.value = form.elements.nonce.value = "";
+    button.disabled = false;
+    button.textContent = "Send";
+    work = null;
+    form.addEventListener("input", start, { once: true });
+  });
+})();
+</script>
 {{ end }}
